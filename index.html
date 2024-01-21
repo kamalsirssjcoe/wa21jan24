@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title> Third App by Kamal Sir </title>
+		<style>
+			* { font-size:40px; }
+			body { background-color: lightblue; }
+		</style>
+		<script>
+			function welcome()
+			{
+				event.preventDefault();
+				let name = document.getElementById("name");
+				let msg = document.getElementById("msg");
+				
+				let d = new Date();
+				let hr = d.getHours();
+				let ans = "";
+				if (hr < 12)		ans = "Good Morning";
+				else if (hr < 16)	ans = "Good Afternoon";						else			ans = "Good Evening";
+
+				msg.innerHTML = ans + " " + name.value;
+			}
+		</script>
+	</head>
+	
+	<body>
+	<center>
+		<h1> Welcome App </h1>
+		<form onsubmit="welcome()">
+			<input type="text" placeholder="enter ur name" id="name"/>
+			<br><br>
+			<input type="submit" />
+		</form>
+		<h2 id="msg"></h2>
+	</center>
+	</body>
+</html>
+
+
+
+
+
+
